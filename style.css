@@ -22,9 +22,12 @@ header h1 {
     margin: 0;
 }
 
-#logo-site {
-    height: 60px; /* Ajuste conforme o formato da sua logo */
+.logo {
+    height: 50px; /* Reduzi bem o tamanho */
     width: auto;
+    filter: brightness(1.2); /* Dá um "tapa" na claridade se ela estiver escura */
+    display: block;
+    margin: 0 auto;
 }
 
 nav ul {
