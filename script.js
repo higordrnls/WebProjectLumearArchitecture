@@ -10,3 +10,16 @@ if (hora < 12) {
 }
 
 console.log("Script Lumear carregado com sucesso.");
+
+// Efeito de Revelação ao Rolar a Página
+const observarScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('aparecer');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(secao => {
+    observarScroll.observe(secao);
+});
