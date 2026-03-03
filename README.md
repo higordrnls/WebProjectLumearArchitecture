@@ -1,4 +1,4 @@
-🏛️ Projeto Lumear: Arquitetura Védica e Consciência
+<h1> 🏛️ Projeto Lumear: Arquitetura Védica e Consciência
 O Lumear é um projeto de arquitetura de vanguarda fundamentado nos princípios da Arquitetura Védica (Vastu Shastra) e nos estudos aprofundados de Silva Propério. O objetivo é harmonizar o espaço físico com as leis da natureza, promovendo saúde, prosperidade e bem-estar aos seus ocupantes.
 
 🌟 O Conceito
