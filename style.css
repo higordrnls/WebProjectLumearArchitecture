@@ -20,11 +20,72 @@ header {
     background: transparent;
 }
 
-/* Ajuste fino da Logo */
+/* TRATAMENTO DA LOGO */
 .logo {
-    height: 60px; /* Tamanho controlado */
+    height: 45px; /* Menor é mais elegante */
     width: auto;
-    margin-bottom: 20px;
+    /* Se a logo for preta, o filtro abaixo a deixa branca/clara */
+    filter: brightness(0) invert(1); 
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    opacity: 1;
+    filter: none; /* Volta a cor original no hover */
+}
+
+/* GRID DE GALERIA */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas perfeitas */
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.item-galeria {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* Fotos sempre quadradas e organizadas */
+    background: #eee;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.item-galeria:hover img {
+    transform: scale(1.1); /* Zoom suave de galeria */
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(18, 18, 18, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.item-galeria:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    color: white;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    border-bottom: 1px solid white;
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 768px) {
+    .grid-galeria { grid-template-columns: 1fr; }
 }
 
 nav ul {
